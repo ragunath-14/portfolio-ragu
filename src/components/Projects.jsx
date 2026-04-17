@@ -14,7 +14,7 @@ const projects = [
     description: "A comprehensive digital portal designed for students and staff providing secure uploads and access to full question bank resources.",
     tags: ["React", "Dashboard", "System"],
     image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=600&auto=format&fit=crop",
-    link: "https://qs-bank-edupappers-c2wxs5k13-ragunath-14s-projects.vercel.app/",
+    link: "https://qs-bank-edupappers.vercel.app/",
   },
   {
     title: "AI Stock Analyzer",
