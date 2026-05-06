@@ -71,15 +71,13 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div style={{
+          <div className="about-deco" style={{
             height: '200px',
             background: 'linear-gradient(135deg,rgba(139,92,246,0.15),rgba(59,130,246,0.1))',
             border: '1px solid rgba(139,92,246,0.2)',
             display: 'flex', justifyContent: 'center', alignItems: 'center',
             fontWeight: '900', fontSize: 'clamp(1.5rem, 5vw, 2.2rem)',
-            background2: 'linear-gradient(135deg,#8B5CF6,#3B82F6)',
             borderRadius: '20px',
-            WebkitBackgroundClip: 'text',
           }}>
             <span style={{
               background: 'linear-gradient(135deg,#8B5CF6,#3B82F6)',

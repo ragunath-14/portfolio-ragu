@@ -5,6 +5,7 @@ import AboutPage from './AboutPage';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import heroBg from '../assets/hero_bg.png';
+import heroAvatar from '../assets/hero_avatar.jpg';
 
 /* ─── Floating particles ─── */
 const Particles = ({ count = 20 }) => {
@@ -106,11 +107,11 @@ const Home = () => {
 
   const projects = [
     {
-      title: 'React E-Commerce Platform',
-      desc: 'A premium retail layout showcasing advanced shopping workflows, dynamic product catalogues, and modern aesthetic visuals.',
-      img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop',
-      link: 'https://react-e-commerce-gray-five.vercel.app/',
-      tag: 'React.js',
+      title: 'CollegeDiaries.in',
+      desc: 'An education consultancy platform helping students discover the right colleges, courses, and career paths with expert guidance.',
+      img: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=600&auto=format&fit=crop',
+      link: 'https://collegediaries.in',
+      tag: 'Full Stack',
     },
     {
       title: 'Questions Paper Bank',
@@ -234,7 +235,7 @@ const Home = () => {
               transition={{ delay: 0.8 }}
               className="btn-row"
             >
-              <a href="/Ragu resume .pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <a href="/Ragu%20resume%20.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <button className="primary-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   View Resume <FiArrowRight />
                 </button>
@@ -242,7 +243,7 @@ const Home = () => {
               <button
                 className="primary-btn"
                 style={{ background: 'transparent', border: '1.5px solid rgba(139,92,246,0.5)', color: '#a78bfa', boxShadow: 'none' }}
-                onClick={() => window.open('https://wa.me/8610766098')}
+                onClick={() => window.open('https://wa.me/918610766098')}
               >
                 Let's Talk 💬
               </button>
@@ -252,7 +253,7 @@ const Home = () => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.05 }}
               className="stats-row"
             >
-              {[{ value: '4+', label: 'Projects Live' }, { value: '1yr+', label: 'Experience' }, { value: '∞', label: 'Passion' }].map((s, i) => (
+              {[{ value: '5+', label: 'Projects Live' }, { value: '1yr+', label: 'Experience' }, { value: '∞', label: 'Passion' }].map((s, i) => (
                 <motion.div key={i} whileHover={{ scale: 1.05 }} style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: 'clamp(1.4rem, 4vw, 1.9rem)', fontWeight: '900', background: 'linear-gradient(135deg,#8B5CF6,#3B82F6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     {s.value}
@@ -269,10 +270,11 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            className="avatar-wrapper"
             style={{ display: 'flex', justifyContent: 'center', flexShrink: 0 }}
           >
             <motion.div className="image-frame-container" whileHover={{ scale: 1.02 }}>
-              <div className="image-frame" style={{ backgroundImage: `url('/src/assets/hero_avatar.jpg')` }} />
+              <div className="image-frame" style={{ backgroundImage: `url(${heroAvatar})` }} />
               <div className="floating-card">
                 <div className="icon-bg">💻</div>
                 <div>
@@ -310,7 +312,7 @@ const Home = () => {
       <div id="resume" style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
         <Orb color="rgba(59,130,246,0.07)" size="500px" style={{ top: '0', right: '-200px' }} />
 
-        <div className="container" style={{ padding: '80px 16px' }}>
+        <div className="container section-mobile-pad">
           <SectionHeader tag="What I Know" title="My" highlight="Skills"
             sub="A comprehensive toolkit bridging design and development." />
 
@@ -351,7 +353,7 @@ const Home = () => {
       <div id="experience" style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
         <Orb color="rgba(20,184,166,0.06)" size="450px" style={{ bottom: '0', left: '-150px', animationDelay: '3s' }} />
 
-        <div className="container" style={{ padding: '80px 16px' }}>
+        <div className="container section-mobile-pad">
           <SectionHeader tag="My Journey" title="Experience &" highlight="Education" />
 
           <div className="experience-grid">
@@ -411,7 +413,7 @@ const Home = () => {
       <div id="projects" style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
         <Orb color="rgba(139,92,246,0.07)" size="500px" style={{ top: '-80px', right: '-150px' }} />
 
-        <div className="container" style={{ padding: '80px 16px' }}>
+        <div className="container section-mobile-pad">
           <SectionHeader tag="What I've Built" title="My" highlight="Projects"
             sub="A collection of technical products covering data analysis and user-centered interfaces." />
 
@@ -420,7 +422,7 @@ const Home = () => {
           >
             {projects.map((proj, idx) => (
               <motion.div key={idx} variants={fadeUp} className="project-card">
-                <div style={{ width: '100%', height: '180px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+                <div className="project-card-img">
                   <img src={proj.img} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   <div style={{
                     position: 'absolute', top: '10px', left: '10px',

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const src = "C:\\Users\\ragu0\\.gemini\\antigravity\\brain\\fb36f8ec-6960-4318-b691-e3866f697268\\media__1773748323422.jpg";
+const src = "C:\\Users\\ragu0\\.gemini\\antigravity\\brain\\cb490cd6-f578-4b59-9c90-c6b32d3b73df\\media__1778034920317.jpg";
 const dst = "c:\\Users\\ragu0\\Desktop\\portfolio ragu\\ragu\\src\\assets\\hero_avatar.jpg";
 
 try {

@@ -18,12 +18,7 @@ const Footer = () => {
       <div className="container">
 
         {/* Top grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '28px',
-          marginBottom: '32px',
-        }}>
+        <div className="footer-grid">
           {/* Brand */}
           <div>
             <h4 style={{
